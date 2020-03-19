@@ -1,17 +1,17 @@
-const deg = 6;
-const hr = document.querySelector('#hr');
-const mn = document.querySelector('#mn');
-const sc = document.querySelector('#sc');
+const DEG = 6;
+const HR = document.getElementById('hr');
+const MN = document.getElementById('mn');
+const SC = document.getElementById('sc');
 
 setInterval(() => {
 
 	let day = new Date();
 	let hh = day.getHours() * 30;
-	let mm = day.getMinutes() * deg;
-	let ss = day.getSeconds() * deg;
+	let mm = day.getMinutes() * DEG;
+	let ss = day.getSeconds() * DEG;
 
-	hr.style.transform = `rotateZ(${(hh)+(mm/12)}deg)`;
-	mn.style.transform = `rotateZ(${mm}deg)`;
-	sc.style.transform = `rotateZ(${ss}deg)`;
+	HR.style.transform = `rotateZ(${(hh)+(mm/12)}deg)`;
+	MN.style.transform = `rotateZ(${mm}deg)`;
+	SC.style.transform = `rotateZ(${ss}deg)`;
 
 })
